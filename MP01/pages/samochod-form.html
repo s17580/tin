@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoServis CarTu</title>
     <link rel="stylesheet" href="../css/style.css"/>
+    <script type="application/javascript" src="../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../js/validationSamochodForm.js"></script>
 </head>
 <body>
     
@@ -26,34 +28,33 @@
 </nav>
 <main>
     <h2>Nowy samochód</h2>
-    <form class="form">
+    <form class="form" novalidate onsubmit="return validateForm();">
 
-        <!-- <div class="form-group"> -->
-        <label for="marka">Marka:<sup>*</sup></label>
-            <input type="text" name="marka" id="marka" />
-        <!-- </div> -->
 
-        <!-- <div class="form-group"> -->
-        <label for="typ">Typ:<sup>*</sup></label>
-            <input type="text" name="typ" id="typ" />
-        <!-- </div> -->
 
-        <!-- <div class="form-group"> -->
-        <label for="numer_rejestracyjny">Numer rej.:<sup>*</sup></label>
-            <input type="text" name="numer_rejestracyjny" id="numer_rejestracyjny" />
-        <!-- </div> -->
+        <label for="marka">Marka:<abbr title="required" aria-label="required">*</abbr></label>
+        <input class="error-input" type="text" name="marka" id="marka" placeholder="2-20 znaków" />
+        <span id="errorMarka" class="errors-text"></span>
 
-        <!-- <div class="form-group"> -->
-        <label for="rok_produkcji">Rok produkcji :<sup>*</sup></label>
-            <input type="year" name="rok_produkcji" id="rok_produkcji" />
-        <!-- </div> -->
-
-        <!-- <div class="form-group"> -->
-        <label for="pojemnosc">Pojemność:<sup>*</sup></label>
-            <input type="text" name="pojemnosc" id="pojemnosc" />
-        <!-- </div> -->
+        <label for="typ">Typ:<abbr title="required" aria-label="required">*</abbr></label>
+        <input class="error-input" type="text" name="typ" id="typ" placeholder="2-60 znaków" />
+        <span id="errorTyp" class="errors-text"></span>
+       
+        <label for="numerRejestracyjny">Numer rej.:<abbr title="required" aria-label="required">*</abbr></label>
+        <input class="error-input" type="text" name="numerRejestracyjny" id="numerRejestracyjny" placeholder="np. WJ3451TRK" />
+        <span id="errorNumerRejestracyjny" class="errors-text"></span>
+        
+        <label for="rokProdukcji">Rok produkcji :<abbr title="required" aria-label="required">*</abbr></label>
+        <input class="error-input" type="year" name="rokProdukcji" id="rokProdukcji" placeholder="4 znaki" />
+        <span id="errorRokProdukcji" class="errors-text"></span>
+        
+        <label for="pojemnosc">Pojemność:<abbr title="required" aria-label="required">*</abbr></label>
+        <input class="error-input" type="text" name="pojemnosc" id="pojemnosc" placeholder="np. 2500" />
+        <span id="errorPojemnosc" class="errors-text"></span>
+    
         
         <div class = "form-buttons" >
+            <p id="errorsSummary" class="errors-text"></p>
             <input class = "form-button-submit" type="submit" value="Dodaj" href="samochod-list.html"  />
             <a class = "form-button-cancel" href="samochod-list.html">Anuluj</a>    
         </div>  
