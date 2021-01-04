@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoServis CarTu</title>
     <link rel="stylesheet" href="../css/style.css"/>
+    <script type="application/javascript" src="../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../js/validationSamochodForm.js"></script>
 </head>
 <body>  
 <header>
@@ -28,40 +30,44 @@
 
     <form class="form">
 
-        <label for="samochod">Samochód:<sup>*</sup></label>
+        <label for="samochod">Samochód:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text"name="samochod" id="samochod" />
+        <span id="errorSamochod" class="errors-text"></span>
 
-        <label for="numer_rej">Numer rej:<sup>*</sup></label>
+        <label for="numer_rej">Numer rej:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="numer_rej" id="numer_rej"/>
+        <span id="errorNumer_Rej" class="errors-text"></span>
 
-        <label for="rok_prod">Rok produkcji:<sup>*</sup></label>
+        <label for="rok_prod">Rok produkcji:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="rok_prod"  id="rok_prod"/>
+        <span id="errorRok_Prod" class="errors-text"></span>
 
         <!-- <div class="form-group"> -->
-        <label for="rodzaj">Rodzaj naprawy:<sup>*</sup></label>
+        <label for="rodzaj">Rodzaj naprawy:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="rodzaj"  id="rodzaj"/>
-        <!-- </div> -->
+        <span id="errorRodzaj" class="errors-text"></span>
+       
+        <label for="data_od">Data od:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="date" name="data_od"  id="data_od"/>
+        <span id="errorData_Od" class="errors-text"></span>
 
-        <!-- <div class="form-group"> -->
-        <label for="data_od">Data od:<sup>*</sup></label>
-        <input type="text" name="data_od"  id="data_od"/>
-        <!-- </div> -->
+        
+        <label for="data_do">Data do:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="date" name="data_do"  id="data_do"/>
+        <span id="errorData_Do" class="errors-text"></span>
+        
+        <label for="koszt_naprawy">Koszt naprawy :<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="number" name="koszt_naprawy"  id="koszt_naprawy"/>
+        <span id="errorKoszt_Naprawy" class="errors-text"></span>
 
-        <!-- <div class="form-group"> -->
-            <label for="data_do">Data do:<sup>*</sup></label>
-            <input type="text" name="data_do"  id="data_do"/>
-        <!-- </div> -->
-
-        <!-- <div class="form-group"> -->
-        <label for="koszt_naprawy">Koszt naprawy :<sup></sup></label>
-        <input type="text" name="koszt_naprawy"  id="koszt_naprawy"/>
-
-        <label for="nazwa_warsztatu">Nazwa warsztatu:<sup></sup></label>
+        <label for="nazwa_warsztatu">Nazwa warsztatu:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="nazwa warsztatu"  id="nazwa_warsztatu"/>
+        <span id="errorNazwa_" class="errors-text"></span>
 
-        <label for="adres">Adres:<sup></sup></label>
+        <label for="adres">Adres:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="adres"  id="adres"/>
-        <!-- </div> -->
+        <span id="errorAdres" class="errors-text"></span>
+       
         <div class = "form-buttons" >
             <input class = "form-button-submit" type="submit" value="Dodaj" />
             <a class = "form-button-cancel" href="zlecenie-naprawy-list.html">Anuluj</a>    
