@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoServis CarTu</title>
     <link rel="stylesheet" href="../css/style.css"/>
+    <script defer type="application/javascript" src="../js/validationCommon.js"></script>
+    <script defer type="application/javascript" src="../js/validationWarsztatForm.js"></script>
 </head>
 <body>
     
@@ -21,30 +23,31 @@
         <li><a href ="warsztat-list.html"class="active">Warsztat</a></li>
         <li><a href ="adres.html">Adres</a></li>
         <li><a href ="../index.html">Wyloguj</a></li>
-        <!-- <li><a href ="">Strona główna</a></li>
-        <li><a href ="">Strona główna</a></li> -->
+        
     </ul>
 </nav>
 <main>
     <h2>Nowy warsztat</h2>
-    <form class="form">
+    <form class="form" onsubmit="return validateForm();" novalidate onsubmit="return validateForm();">
 
-        <!-- <div class="form-group"> -->
-        <label for="nazwa_warsztat">Nazwa warsztatu:<sup>*</sup></label>
-            <input type="text" name="nazwa_warsztat" id="nazwa_warsztat" />
-        <!-- </div> -->
+        
+        <label for="nazwa_warsztat">Nazwa warsztatu:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="nazwa_warsztat" id="nazwa_warsztat" placeholder="2-30 znaków" />
+        <span id="errorNazwa_Warsztat" class="errors-text"></span>
+       
+        
+        <label for="telefon">Telefon:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="telefon" id="telefon" placeholder="3-25 znaków" />
+        <span id="errorTelefon" class="errors-text"></span>
+       
 
-        <!-- <div class="form-group"> -->
-        <label for="telefon">Telefon:<sup>*</sup></label>
-            <input type="text" name="telefon" id="telefon" />
-        <!-- </div> -->
-
-        <!-- <div class="form-group"> -->
-        <label for="email">E-mail<sup>*</sup></label>
-            <input type="email" name="email" id="email" />
-        <!-- </div> -->
+        <label for="email">E-mail:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="email" name="email" id="email" placeholder="np. nazwa@domena.pl" />
+        <span id="errorEmail" class="errors-text"></span>
+        
         
         <div class = "form-buttons" >
+            <p id="errorsSummary" class="errors-text"></p>
             <input class = "form-button-submit" type="submit" value="Dodaj" />
             <a class = "form-button-cancel" href="warsztat-list.html">Anuluj</a>    
         </div>  

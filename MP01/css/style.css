@@ -304,8 +304,8 @@ abbr[title='required'] {
 
 .form-buttons{
     grid-column: 1 / span 2;
-    grid-column-end: -1;
-    grid-column: 1 / span 1;
+    /* grid-column-end: -1; */
+    /* grid-column: 1 / span 1; */
 }
 
 .list-actions-button-details,
@@ -413,7 +413,7 @@ img.foto{
         }
         
             
-        #username, #password {
+        #username, #password, #password2 {
         display: block;
         width: 360px; 
         margin: 0 auto;
@@ -422,7 +422,7 @@ img.foto{
         outline: 5px solid #ebebeb;
         font-size: 22px;
         }
-        #username:focus, #password:focus {
+        #username:focus, #password:focus,#password2:focus {
         outline: 5px solid #e5f2f8;
         }
             

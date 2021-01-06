@@ -94,7 +94,3 @@ function checkNumberRange(value, min, max) {
     }
     return true;
 }
-
-
-
-
