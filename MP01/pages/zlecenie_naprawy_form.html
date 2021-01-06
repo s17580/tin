@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoServis CarTu</title>
     <link rel="stylesheet" href="../css/style.css"/>
-    <script type="application/javascript" src="../js/validationCommon.js"></script>
-    <script type="application/javascript" src="../js/validationSamochodForm.js"></script>
+    <script defer type="application/javascript" src="../js/validationCommon.js"></script>
+    <script defer type="application/javascript" src="../js/validationZlecenieNaprawyForm.js"></script>
 </head>
 <body>  
 <header>
@@ -28,47 +28,46 @@
 <main>
     <h2>Nowe zlecenie naprawy</h2>
 
-    <form class="form">
+    <form class="form" onsubmit="return validateForm();" novalidate onsubmit="return validateForm();">
 
         <label for="samochod">Samochód:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text"name="samochod" id="samochod" />
+        <input type="text"name="samochod" id="samochod" placeholder="---Wybierz samochód---" />
         <span id="errorSamochod" class="errors-text"></span>
 
         <label for="numer_rej">Numer rej:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="numer_rej" id="numer_rej"/>
+        <input type="text" name="numer_rej" id="numer_rej" placeholder="---Wybierz numer rejestracyjny---"/>
         <span id="errorNumer_Rej" class="errors-text"></span>
 
         <label for="rok_prod">Rok produkcji:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="rok_prod"  id="rok_prod"/>
+        <input type="text" name="rok_prod"  id="rok_prod" placeholder="---Wybierz rok produkcji---"/>
         <span id="errorRok_Prod" class="errors-text"></span>
 
-        <!-- <div class="form-group"> -->
-        <label for="rodzaj">Rodzaj naprawy:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="rodzaj"  id="rodzaj"/>
-        <span id="errorRodzaj" class="errors-text"></span>
+        <label for="rodzaj_naprawy">Rodzaj naprawy:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="rodzaj_naprawy"  id="rodzaj_naprawy" placeholder="---Wybierz rodzaj naprawy---"/>
+        <span id="errorRodzaj_Naprawy" class="errors-text"></span>
        
         <label for="data_od">Data od:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="data_od"  id="data_od"/>
         <span id="errorData_Od" class="errors-text"></span>
 
-        
         <label for="data_do">Data do:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="data_do"  id="data_do"/>
         <span id="errorData_Do" class="errors-text"></span>
         
         <label for="koszt_naprawy">Koszt naprawy :<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="number" name="koszt_naprawy"  id="koszt_naprawy"/>
+        <input type="text" name="koszt_naprawy"  id="koszt_naprawy"/>
         <span id="errorKoszt_Naprawy" class="errors-text"></span>
 
         <label for="nazwa_warsztatu">Nazwa warsztatu:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="nazwa warsztatu"  id="nazwa_warsztatu"/>
-        <span id="errorNazwa_" class="errors-text"></span>
+        <input type="text" name="nazwa warsztatu"  id="nazwa_warsztatu" placeholder="---Wybierz nazwę warsztatu---"/>
+        <span id="errorNazwa_Warsztatu" class="errors-text"></span>
 
         <label for="adres">Adres:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="adres"  id="adres"/>
+        <input type="text" name="adres"  id="adres" placeholder="---Wybierz adres---"/>
         <span id="errorAdres" class="errors-text"></span>
        
         <div class = "form-buttons" >
+            <p id="errorsSummary" class="errors-text"></p>
             <input class = "form-button-submit" type="submit" value="Dodaj" />
             <a class = "form-button-cancel" href="zlecenie-naprawy-list.html">Anuluj</a>    
         </div>  

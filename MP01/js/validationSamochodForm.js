@@ -8,12 +8,14 @@ const rokProdukcjiInput = document.getElementById("rokProdukcji");
 const errorRokProdukcji = document.getElementById("errorRokProdukcji");
 const pojemnoscInput = document.getElementById("pojemnosc");
 const errorPojemnosc = document.getElementById("errorPojemnosc");
+const pojemnoscInput = document.getElementById("pojemnosc");
+const errorPojemnosc = document.getElementById("errorPojemnosc");
 
 const errorsSummary = document.getElementById("errorsSummary");
 
 function validateForm() {
 
-    resetErrors([markaInput, typInput, numerRejestracyjnyInput, rokProdukcjiInput],[errorMarka,errorTyp,errorNumerRejestracyjny,errorRokProdukcji,errorPojemnosc], errorsSummary);
+    resetErrors([markaInput, typInput, numerRejestracyjnyInput, rokProdukcjiInput,rokProdukcjiInput],[errorMarka,errorTyp,errorNumerRejestracyjny,errorRokProdukcji,errorPojemnosc], errorsSummary);
     let valid = true;
     if (!checkRequired(markaInput.value)) {
       valid = false;

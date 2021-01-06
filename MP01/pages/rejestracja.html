@@ -6,7 +6,8 @@
     <title>AutoServis CarTu</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../css/login.css"/>
-    
+    <script defer type="application/javascript" src="../js/validationCommon.js"></script>
+    <script defer type="application/javascript" src="../js/validationRejestracja.js"></script>
    
 </head>
 <body>
@@ -26,11 +27,11 @@
     </ul>
 </nav>
 <div class="center">
-
     <div class="panel-log-rej">
-        <form>
-            <label for="username">Nazwa użytkownika:</label>
-            <input type="text" id="username" name="username">
+        <form class = "form" onsubmit="return validateForm();" novalidate onsubmit="return validateForm();"></form>
+            <label for="username">Nazwa użytkownika:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="username" id="username" placeholder="2-15 znaków" />
+            <span  id="errorUsername" class="errors-text"></span>
             <label for="username">E-mail:</label>
             <input type="text" id="username" name="username">
             <label for="password">Twoje hasło:</label>
@@ -40,6 +41,7 @@
             <div id="lower">
                 <p>
                     <a class = "button-register button-shape"    href="register-succes.html">Zarejestruj się</a>
+                    <p id="errorsSummary" class="errors-text"></p>
 
                 </p>
                 
