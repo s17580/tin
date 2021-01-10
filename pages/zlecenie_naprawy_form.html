@@ -24,51 +24,52 @@
     </ul>
 </nav>
 <main>
-    <h2>Edycja zlecenia naprawy</h2>
+    <h2>Nowe zlecenie naprawy</h2>
 
     <form class="form">
 
-        <label for="samochod">Samochód:<sup></sup></label>
-        <select name="samochod" id="samochod"><option>BMW 330d</option></select>
+        <label for="samochod">Samochód:<sup>*</sup></label>
+        <input type="text"name="samochod" id="samochod" />
 
-        <label for="numer_rej">Numer rej:<sup></sup></label>
-        <input type="text" name="numer_rej" value="Wj3451TR" id="numer_rej"/>
+        <label for="numer_rej">Numer rej:<sup>*</sup></label>
+        <input type="text" name="numer_rej" id="numer_rej"/>
 
-        <label for="rok_prod">Rok produkcji:<sup></sup></label>
-        <input type="text" name="rok_prod" value="2017" id="rok_prod"/>
+        <label for="rok_prod">Rok produkcji:<sup>*</sup></label>
+        <input type="text" name="rok_prod"  id="rok_prod"/>
 
         <!-- <div class="form-group"> -->
-        <label for="rodzaj">Rodzaj naprawy:<sup></sup></label>
-        <input type="text" name="rodzaj" value="Wymiana klocków" id="rodzaj"/>
+        <label for="rodzaj">Rodzaj naprawy:<sup>*</sup></label>
+        <input type="text" name="rodzaj"  id="rodzaj"/>
         <!-- </div> -->
 
         <!-- <div class="form-group"> -->
-        <label for="data_od">Data od:<sup></sup></label>
-        <input type="text" name="data_od" value="2020.11.12" id="data_od"/>
+        <label for="data_od">Data od:<sup>*</sup></label>
+        <input type="text" name="data_od"  id="data_od"/>
         <!-- </div> -->
 
         <!-- <div class="form-group"> -->
-            <label for="data_do">Data do:<sup></sup></label>
-            <input type="text" name="data_do" value="2020.11.14" id="data_do"/>
+            <label for="data_do">Data do:<sup>*</sup></label>
+            <input type="text" name="data_do"  id="data_do"/>
         <!-- </div> -->
 
         <!-- <div class="form-group"> -->
         <label for="koszt_naprawy">Koszt naprawy :<sup></sup></label>
-        <input type="text" name="koszt_naprawy" value="1200 PLN" id="koszt_naprawy"/>
+        <input type="text" name="koszt_naprawy"  id="koszt_naprawy"/>
 
         <label for="nazwa_warsztatu">Nazwa warsztatu:<sup></sup></label>
-        <input type="text" name="nazwa warsztatu" value="Bemowo CarTu" id="nazwa_warsztatu"/>
+        <input type="text" name="nazwa warsztatu"  id="nazwa_warsztatu"/>
 
         <label for="adres">Adres:<sup></sup></label>
-        <select name="adres" id="adres"><option>Górczewska 35, 01-460 Warszawa</option></select>
-        
-
+        <input type="text" name="adres"  id="adres"/>
+        <!-- </div> -->
         <div class = "form-buttons" >
-            <input class = "form-button-submit" type="submit" value="Zapisz"/>
+            <input class = "form-button-submit" type="submit" value="Dodaj" />
             <a class = "form-button-cancel" href="zlecenie-naprawy-list.html">Anuluj</a>    
         </div>  
     
     </form>
+
+    
 </main>
 
 
