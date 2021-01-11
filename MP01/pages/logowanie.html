@@ -20,7 +20,7 @@
     <ul>
         
         
-        <li><a href="../index.html" class="">Strona główna</a></li>
+        <li><a href="../panel.html" class="">Strona główna</a></li>
         <li class="right-menu"><a href="" class="active">Logowanie</a></li>
      
     </ul>
@@ -31,16 +31,19 @@
 <div class="panel flex">
     <div class = "panel-box rej-log-control">
         <h2 class="h2-rej-log">AutoService CarTu Zaloguj</h2>
-        <form class= "form-rej-log" onsubmit="return validateForm();" novalidate onsubmit="return validateForm();">
+        <form action="panel.html" method="post" class= "form-rej-log" onsubmit="return validateForm();" novalidate onsubmit="return validateForm();">
 
             <input class="fields rej-log-control" type="text" id="username" name="username" placeholder="Nazwa użytkownika">
             <span  id="errorUsername" class="errors-text-rej-log"></span>
             
             <input class="fields rej-log-control " type="password" id="password" name="password" placeholder="Hasło">
             <span  id="errorPassword" class="errors-text"></span>
-        
+            
             <input type="submit" value="Zaloguj"  class="button-rej-log"/>
             <p id="errorsSummary" class="errors-text"></p>
+
+
+
     </div>
     
     </div>

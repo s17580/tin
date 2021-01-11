@@ -2,6 +2,9 @@ const usernameInput = document.getElementById("username");
 const errorUsername = document.getElementById("errorUsername");
 const passwordInput = document.getElementById("password");
 const errorPassword = document.getElementById("errorPassword");
+const password      =document.getElementById('password');
+const eye           =document.getElementById('eye');
+const crossedEye    =document.getElementById('crossedEye');
 
 const errorsSummary = document.getElementById("errorsSummary");
 
